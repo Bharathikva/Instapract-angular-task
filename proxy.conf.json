@@ -1,0 +1,10 @@
+
+
+  {
+    "/api/*": {
+      "target": "https://ahd.instapract.ae/web",
+      "secure": false,
+      "logLevel":"debug",
+      "changeOrigin": true
+    }
+  }

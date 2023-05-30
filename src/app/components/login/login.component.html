@@ -1,0 +1,67 @@
+<section class="vh-100 bg-white">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5 px-0 d-none d-sm-block position-obsolute">
+                <!-- Background image -->
+                <div class="bg-image d-flex justify-content-center align-items-center w-100 vh-100"
+                    style="background-image: url('assets/images/hero2.png');">
+                    <h1 class=" w-50 text-white text-start title">Instapract <br> User Centric Teleconsulting Expert
+                        Opnion Platform.</h1>
+                </div>
+                <!-- Background image -->
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="text-start py-4">
+                    <img src="assets/images/logo.png" alt="">
+                </div>
+                <div class="text-start py-3">
+                    <h2 class="h1 fw-bold mb-4 pt-5 pt-md-0">Login</h2>
+                    <hr class="hr" style="border: 1px solid #257fac;" />
+                </div>
+                <form class="g3 needs-validation" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                    <!-- Email input -->
+                    <div class="form-floating mb-4">
+                        <input type="text" id="form3Example3" formControlName="username"
+                            class="form-control form-control-lg" placeholder="Enter a valid user name" />
+                        <label class="form-label" for="form3Example3">User Name</label>
+                        <div class="error"
+                            *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">
+                            Username is required</div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-floating mb-3">
+                        <input type="password" id="form3Example4" formControlName="password" class="form-control form-control-lg"
+                            placeholder="Enter password" />
+                        <label class="form-label" for="form3Example4">Password</label>
+                        <div class="error"
+                            *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">
+                            Password is required</div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-0">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                            <label class="form-check-label" for="form2Example3">
+                                Remember me
+                            </label>
+                        </div>
+                        <a href="#!" class="text-body">Forgot password?</a>
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-green btn-lg w-100"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="loginForm.invalid">Login</button>
+                            <div *ngIf="invalidLogin" class="error">
+                                <div>Invalid credentials.</div>
+                              </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

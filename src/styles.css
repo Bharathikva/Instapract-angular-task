@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'DINPro-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINPro-Medium'), url('./assets/fonts/DINPro-Medium_13936.woff') format('woff');
+    }
+
+  body {
+    font-family: 'DINPro-Medium', Fallback, sans-serif;
+    background-color: #F5F5F5;
+
+  }  
+
+  .title{
+    font-family: 'Philosopher', sans-serif;
+    line-height: 150%;
+  }  
+
+  .text-green{
+    color: #16719D;
+  }
+
+  .text-green:hover{
+    color: #257fac;
+  }
+
+
+
+  .btn-green{
+    background-color: #16719D;
+    color: white;
+  }
+
+  .btn-green:hover{
+    background-color: #257fac;
+    color: white;
+  }
+
+.error{
+    color: red;
+}
+
+.width{
+  width: 50%;
+    }
+  
+@media only screen and (max-width: 600px) {
+  .width{
+width: 100%;
+  }
+
+}
